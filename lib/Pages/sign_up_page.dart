@@ -150,11 +150,10 @@ class _SignUpPageState extends State<SignUpPage> {
   }
 
   Future addinfos(String username) async {
-    await FirebaseFirestore.instance.collection("users").add(
-      {
-        "userName": username,
-      },
-    );
+    print('😑 adding user ');
+    await FirebaseFirestore.instance.collection("collectionPath").add({
+      "user": username,
+    });
   }
 
   void singUp() async {
